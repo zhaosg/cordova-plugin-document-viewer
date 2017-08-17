@@ -72,11 +72,11 @@
         <source-file target-dir="src/com/github/barteksc/pdfviewer/source" src="src/android/com/github/barteksc/pdfviewer/source/FileSource.java" />
         <source-file target-dir="src/com/github/barteksc/pdfviewer/source" src="src/android/com/github/barteksc/pdfviewer/source/InputStreamSource.java" />
         <source-file target-dir="src/com/github/barteksc/pdfviewer/source" src="src/android/com/github/barteksc/pdfviewer/source/UriSource.java" />
-        <source-file target-dir="src/com/github/barteksc/pdfviewer/util" src="src/android/com/github/barteksc/pdfviewer/source/ArrayUtils.java" />
-        <source-file target-dir="src/com/github/barteksc/pdfviewer/util" src="src/android/com/github/barteksc/pdfviewer/source/Constants.java" />
-        <source-file target-dir="src/com/github/barteksc/pdfviewer/util" src="src/android/com/github/barteksc/pdfviewer/source/FileUtils.java" />
-        <source-file target-dir="src/com/github/barteksc/pdfviewer/util" src="src/android/com/github/barteksc/pdfviewer/source/MathUtils.java" />
-        <source-file target-dir="src/com/github/barteksc/pdfviewer/util" src="src/android/com/github/barteksc/pdfviewer/source/Util.java" />
+        <source-file target-dir="src/com/github/barteksc/pdfviewer/util" src="src/android/com/github/barteksc/pdfviewer/util/ArrayUtils.java" />
+        <source-file target-dir="src/com/github/barteksc/pdfviewer/util" src="src/android/com/github/barteksc/pdfviewer/util/Constants.java" />
+        <source-file target-dir="src/com/github/barteksc/pdfviewer/util" src="src/android/com/github/barteksc/pdfviewer/util/FileUtils.java" />
+        <source-file target-dir="src/com/github/barteksc/pdfviewer/util" src="src/android/com/github/barteksc/pdfviewer/util/MathUtils.java" />
+        <source-file target-dir="src/com/github/barteksc/pdfviewer/util" src="src/android/com/github/barteksc/pdfviewer/util/Util.java" />
         <source-file target-dir="src/com/github/barteksc/pdfviewer" src="src/android/com/github/barteksc/pdfviewer/AnimationManager.java" />
         <source-file target-dir="src/com/github/barteksc/pdfviewer" src="src/android/com/github/barteksc/pdfviewer/CacheManager.java" />
         <source-file target-dir="src/com/github/barteksc/pdfviewer" src="src/android/com/github/barteksc/pdfviewer/DecodingAsyncTask.java" />
