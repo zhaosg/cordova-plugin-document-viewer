@@ -53,17 +53,42 @@
             </provider>
 
         </config-file>
-        <source-file
-            src="src/android/res/xml/documentviewer_file_paths.xml"
-            target-dir="res/xml"/>
+        <source-file src="src/android/res/xml/documentviewer_file_paths.xml" target-dir="res/xml"/>
+        <source-file target-dir="src/de/sitewaerts/cordova/documentviewer" src="src/android/de/sitewaerts/cordova/documentviewer/FileProvider.java" />
+        <source-file target-dir="src/de/sitewaerts/cordova/documentviewer" src="src/android/de/sitewaerts/cordova/documentviewer/DocumentViewerPlugin.java" />
+        <source-file target-dir="src/com/github/barteksc/pdfviewer/exception" src="src/android/com/github/barteksc/pdfviewer/exception/FileNotFoundException.java" />
+        <source-file target-dir="com.github/barteksc/pdfviewer/listener" src="src/android/com.github/barteksc/pdfviewer/listener/OnDrawListener.java" />
+        <source-file target-dir="com.github/barteksc/pdfviewer/listener" src="src/android/com.github/barteksc/pdfviewer/listener/OnErrorListener.java" />
+        <source-file target-dir="com.github/barteksc/pdfviewer/listener" src="src/android/com.github/barteksc/pdfviewer/listener/OnLoadCompleteListener.java" />
+        <source-file target-dir="com.github/barteksc/pdfviewer/listener" src="src/android/com.github/barteksc/pdfviewer/listener/OnPageChangeListener.java" />
+        <source-file target-dir="com.github/barteksc/pdfviewer/listener" src="src/android/com.github/barteksc/pdfviewer/listener/OnPageScrollListener.java" />
+        <source-file target-dir="com.github/barteksc/pdfviewer/listener" src="src/android/com.github/barteksc/pdfviewer/listener/OnRenderListener.java" />
+        <source-file target-dir="com.github/barteksc/pdfviewer/model" src="src/android/com.github/barteksc/pdfviewer/model/PagePart.java" />
+        <source-file target-dir="com.github/barteksc/pdfviewer/scroll" src="src/android/com.github/barteksc/pdfviewer/scroll/DefaultScrollHandle.java" />
+        <source-file target-dir="com.github/barteksc/pdfviewer/scroll" src="src/android/com.github/barteksc/pdfviewer/scroll/ScrollHandle.java" />
+        <source-file target-dir="com.github/barteksc/pdfviewer/source" src="src/android/com.github/barteksc/pdfviewer/source/AssetSource.java" />
+        <source-file target-dir="com.github/barteksc/pdfviewer/source" src="src/android/com.github/barteksc/pdfviewer/source/ByteArraySource.java" />
+        <source-file target-dir="com.github/barteksc/pdfviewer/source" src="src/android/com.github/barteksc/pdfviewer/source/DocumentSource.java" />
+        <source-file target-dir="com.github/barteksc/pdfviewer/source" src="src/android/com.github/barteksc/pdfviewer/source/FileSource.java" />
+        <source-file target-dir="com.github/barteksc/pdfviewer/source" src="src/android/com.github/barteksc/pdfviewer/source/InputStreamSource.java" />
+        <source-file target-dir="com.github/barteksc/pdfviewer/source" src="src/android/com.github/barteksc/pdfviewer/source/UriSource.java" />
+        <source-file target-dir="com.github/barteksc/pdfviewer/util" src="src/android/com.github/barteksc/pdfviewer/source/ArrayUtils.java" />
+        <source-file target-dir="com.github/barteksc/pdfviewer/util" src="src/android/com.github/barteksc/pdfviewer/source/Constants.java" />
+        <source-file target-dir="com.github/barteksc/pdfviewer/util" src="src/android/com.github/barteksc/pdfviewer/source/FileUtils.java" />
+        <source-file target-dir="com.github/barteksc/pdfviewer/util" src="src/android/com.github/barteksc/pdfviewer/source/MathUtils.java" />
+        <source-file target-dir="com.github/barteksc/pdfviewer/util" src="src/android/com.github/barteksc/pdfviewer/source/Util.java" />
+        <source-file target-dir="com.github/barteksc/pdfviewer" src="src/android/com.github/barteksc/pdfviewer/AnimationManager.java" />
+        <source-file target-dir="com.github/barteksc/pdfviewer" src="src/android/com.github/barteksc/pdfviewer/CacheManager.java" />
+        <source-file target-dir="com.github/barteksc/pdfviewer" src="src/android/com.github/barteksc/pdfviewer/DecodingAsyncTask.java" />
+        <source-file target-dir="com.github/barteksc/pdfviewer" src="src/android/com.github/barteksc/pdfviewer/DragPinchManager.java" />
+        <source-file target-dir="com.github/barteksc/pdfviewer" src="src/android/com.github/barteksc/pdfviewer/PagesLoader.java" />
+        <source-file target-dir="com.github/barteksc/pdfviewer" src="src/android/com.github/barteksc/pdfviewer/PDFView.java" />
+        <source-file target-dir="com.github/barteksc/pdfviewer" src="src/android/com.github/barteksc/pdfviewer/RenderingHandler.java" />
 
-        <source-file
-          src="src/android/de/sitewaerts/cordova/documentviewer/FileProvider.java" 
-          target-dir="src/de/sitewaerts/cordova/documentviewer"/>
-
-        <source-file
-                src="src/android/de/sitewaerts/cordova/documentviewer/DocumentViewerPlugin.java"
-                target-dir="src/de/sitewaerts/cordova/documentviewer"/>
+        <framework src="com.github.barteksc:pdfium-android:1.7.0"/>
+        <framework src="com.android.support:appcompat-v7:25.3.1"/>
+        <framework src="org.androidannotations:androidannotations:4.0.0"/>
+        <framework src="org.androidannotations:androidannotations-api:4.0.0"/>
      </platform>
 
     <platform name="ios">
