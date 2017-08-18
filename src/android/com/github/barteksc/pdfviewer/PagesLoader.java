@@ -49,7 +49,7 @@ class PagesLoader {
         final float partWidth = (Constants.PART_SIZE * ratioX) / pdfView.getZoom();
         final int nbRows = MathUtils.ceil(1f / partHeight);
         final int nbCols = MathUtils.ceil(1f / partWidth);
-        return new Pair<>(nbCols, nbRows);
+        return new Pair<Integer, Integer>(nbCols, nbRows);
     }
 
     private int documentPage(int userPage) {

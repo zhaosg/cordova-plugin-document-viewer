@@ -299,7 +299,7 @@ public class PDFView extends RelativeLayout {
     /**
      * pages numbers used when calling onDrawAllListener
      */
-    private List<Integer> onDrawPagesNums = new ArrayList<>(10);
+    private List<Integer> onDrawPagesNums = new ArrayList<Integer>(10);
 
     /**
      * Construct the initial view
@@ -1270,7 +1270,7 @@ public class PDFView extends RelativeLayout {
 
     public List<PdfDocument.Bookmark> getTableOfContents() {
         if (pdfDocument == null) {
-            return new ArrayList<>();
+            return new ArrayList<PdfDocument.Bookmark>();
         }
         return pdfiumCore.getTableOfContents(pdfDocument);
     }
