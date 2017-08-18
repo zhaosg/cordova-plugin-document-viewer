@@ -53,6 +53,20 @@
             </provider>
 
         </config-file>
+        <source-file src="src/android/res/drawable/default_scroll_handle_bottom.xml" target-dir="res/drawable"/>
+        <source-file src="src/android/res/drawable/default_scroll_handle_left.xml" target-dir="res/drawable"/>
+        <source-file src="src/android/res/drawable/default_scroll_handle_right.xml" target-dir="res/drawable"/>
+        <source-file src="src/android/res/drawable/default_scroll_handle_top.xml" target-dir="res/drawable"/>
+        <source-file src="src/android/res/drawable/ic_launcher.png" target-dir="res/drawable"/>
+        <source-file src="src/android/res/drawable-hdpi/ic_open_in_browser_grey_700_48dp.png" target-dir="res/drawable-hdpi"/>
+        <source-file src="src/android/res/drawable-mdpi/ic_open_in_browser_grey_700_48dp.png" target-dir="res/drawable-mdpi"/>
+        <source-file src="src/android/res/drawable-xhdpi/ic_open_in_browser_grey_700_48dp.png" target-dir="res/drawable-xhdpi"/>
+        <source-file src="src/android/res/drawable-xxhdpi/ic_open_in_browser_grey_700_48dp.png" target-dir="res/drawable-xxhdpi"/>
+        <source-file src="src/android/res/drawable-xxxhdpi/ic_open_in_browser_grey_700_48dp.png" target-dir="res/drawable-xxxhdpi"/>
+        <source-file src="src/android/res/menu/options.xml" target-dir="res/menu"/>
+        <source-file src="src/android/res/values/styles.xml" target-dir="res/values"/>
+        <source-file src="src/android/res/values/strings.xml" target-dir="res/values"/>
+        <source-file src="src/android/res/values/attrs.xml" target-dir="res/values"/>
         <source-file src="src/android/res/xml/documentviewer_file_paths.xml" target-dir="res/xml"/>
         <source-file target-dir="src/de/sitewaerts/cordova/documentviewer" src="src/android/de/sitewaerts/cordova/documentviewer/FileProvider.java" />
         <source-file target-dir="src/de/sitewaerts/cordova/documentviewer" src="src/android/de/sitewaerts/cordova/documentviewer/DocumentViewerPlugin.java" />
