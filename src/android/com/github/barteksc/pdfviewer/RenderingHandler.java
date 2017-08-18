@@ -49,7 +49,7 @@ class RenderingHandler extends Handler {
     private RectF renderBounds = new RectF();
     private Rect roundedRenderBounds = new Rect();
     private Matrix renderMatrix = new Matrix();
-    private final Set<Integer> openedPages = new HashSet<>();
+    private final Set<Integer> openedPages = new HashSet<Integer>();
     private boolean running = false;
 
     RenderingHandler(Looper looper, PDFView pdfView, PdfiumCore pdfiumCore, PdfDocument pdfDocument) {

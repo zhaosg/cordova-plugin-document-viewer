@@ -41,9 +41,9 @@ class CacheManager {
     private final PagePartComparator comparator = new PagePartComparator();
 
     public CacheManager() {
-        activeCache = new PriorityQueue<>(CACHE_SIZE, comparator);
-        passiveCache = new PriorityQueue<>(CACHE_SIZE, comparator);
-        thumbnails = new ArrayList<>();
+        activeCache = new PriorityQueue<PagePart>(CACHE_SIZE, comparator);
+        passiveCache = new PriorityQueue<PagePart>(CACHE_SIZE, comparator);
+        thumbnails = new ArrayList<PagePart>();
     }
 
     public void cachePart(PagePart part) {
@@ -134,7 +134,7 @@ class CacheManager {
 
     public List<PagePart> getPageParts() {
         synchronized (passiveActiveLock) {
-            List<PagePart> parts = new ArrayList<>(passiveCache);
+            List<PagePart> parts = new ArrayList<PagePart>(passiveCache);
             parts.addAll(activeCache);
             return parts;
         }

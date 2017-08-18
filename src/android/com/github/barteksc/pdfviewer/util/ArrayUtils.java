@@ -26,7 +26,7 @@ public class ArrayUtils {
 
     /** Transforms (0,1,2,2,3) to (0,1,2,3) */
     public static int[] deleteDuplicatedPages(int[] pages) {
-        List<Integer> result = new ArrayList<>();
+        List<Integer> result = new ArrayList<Integer>();
         int lastInt = -1;
         for (Integer currentInt : pages) {
             if (lastInt != currentInt) {
