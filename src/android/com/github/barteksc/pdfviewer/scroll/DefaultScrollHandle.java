@@ -11,10 +11,11 @@ import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.github.barteksc.pdfviewer.AssetUtil;
 import com.github.barteksc.pdfviewer.PDFView;
-import com.github.barteksc.R;
 import com.github.barteksc.pdfviewer.util.Util;
 
+//import io.ionic.starter.R;
 public class DefaultScrollHandle extends RelativeLayout implements ScrollHandle {
 
     private final static int HANDLE_LONG = 65;
@@ -28,7 +29,7 @@ public class DefaultScrollHandle extends RelativeLayout implements ScrollHandle 
     private boolean inverted;
     private PDFView pdfView;
     private float currentPos;
-
+    private AssetUtil assetUtil;
     private Handler handler = new Handler();
     private Runnable hidePageScrollerRunnable = new Runnable() {
         @Override
@@ -45,6 +46,7 @@ public class DefaultScrollHandle extends RelativeLayout implements ScrollHandle 
         super(context);
         this.context = context;
         this.inverted = inverted;
+        this.assetUtil = AssetUtil.getInstance(context);
         textView = new TextView(context);
         setVisibility(INVISIBLE);
         setTextColor(Color.BLACK);
@@ -55,26 +57,27 @@ public class DefaultScrollHandle extends RelativeLayout implements ScrollHandle 
     public void setupLayout(PDFView pdfView) {
         int align, width, height;
         Drawable background;
+
         // determine handler position, default is right (when scrolling vertically) or bottom (when scrolling horizontally)
         if (pdfView.isSwipeVertical()) {
             width = HANDLE_LONG;
             height = HANDLE_SHORT;
             if (inverted) { // left
                 align = ALIGN_PARENT_LEFT;
-                background = ContextCompat.getDrawable(context, R.drawable.default_scroll_handle_left);
+                background = ContextCompat.getDrawable(context, assetUtil.getResIdForDrawable("default_scroll_handle_left.xml"));
             } else { // right
                 align = ALIGN_PARENT_RIGHT;
-                background = ContextCompat.getDrawable(context, R.drawable.default_scroll_handle_right);
+                background = ContextCompat.getDrawable(context, assetUtil.getResIdForDrawable("default_scroll_handle_right.xml"));
             }
         } else {
             width = HANDLE_SHORT;
             height = HANDLE_LONG;
             if (inverted) { // top
                 align = ALIGN_PARENT_TOP;
-                background = ContextCompat.getDrawable(context, R.drawable.default_scroll_handle_top);
+                background = ContextCompat.getDrawable(context, assetUtil.getResIdForDrawable("default_scroll_handle_top.xml"));
             } else { // bottom
                 align = ALIGN_PARENT_BOTTOM;
-                background = ContextCompat.getDrawable(context, R.drawable.default_scroll_handle_bottom);
+                background = ContextCompat.getDrawable(context, assetUtil.getResIdForDrawable("default_scroll_handle_bottom.xml"));
             }
         }
 
