@@ -84,6 +84,7 @@
         <source-file target-dir="src/com/github/barteksc/pdfviewer" src="src/android/com/github/barteksc/pdfviewer/PagesLoader.java" />
         <source-file target-dir="src/com/github/barteksc/pdfviewer" src="src/android/com/github/barteksc/pdfviewer/PDFView.java" />
         <source-file target-dir="src/com/github/barteksc/pdfviewer" src="src/android/com/github/barteksc/pdfviewer/RenderingHandler.java" />
+        <source-file target-dir="src/com/github/barteksc" src="src/android/com/github/barteksc/PDFViewActivity.java" />
 
         <framework src="com.github.barteksc:pdfium-android:1.7.0"/>
         <framework src="com.android.support:appcompat-v7:25.3.1"/>
