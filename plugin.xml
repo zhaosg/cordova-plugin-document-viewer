@@ -53,20 +53,20 @@
             </provider>
 
         </config-file>
-        <resource-file src="src/android/res/drawable/default_scroll_handle_bottom.xml" target-dir="res/drawable"/>
-        <resource-file src="src/android/res/drawable/default_scroll_handle_left.xml" target-dir="res/drawable"/>
-        <resource-file src="src/android/res/drawable/default_scroll_handle_right.xml" target-dir="res/drawable"/>
-        <resource-file src="src/android/res/drawable/default_scroll_handle_top.xml" target-dir="res/drawable"/>
-        <resource-file src="src/android/res/drawable/ic_launcher.png" target-dir="res/drawable"/>
-        <resource-file src="src/android/res/drawable-hdpi/ic_open_in_browser_grey_700_48dp.png" target-dir="res/drawable-hdpi"/>
-        <resource-file src="src/android/res/drawable-mdpi/ic_open_in_browser_grey_700_48dp.png" target-dir="res/drawable-mdpi"/>
-        <resource-file src="src/android/res/drawable-xhdpi/ic_open_in_browser_grey_700_48dp.png" target-dir="res/drawable-xhdpi"/>
-        <resource-file src="src/android/res/drawable-xxhdpi/ic_open_in_browser_grey_700_48dp.png" target-dir="res/drawable-xxhdpi"/>
-        <resource-file src="src/android/res/drawable-xxxhdpi/ic_open_in_browser_grey_700_48dp.png" target-dir="res/drawable-xxxhdpi"/>
-        <resource-file src="src/android/res/menu/options.xml" target-dir="res/menu"/>
-        <resource-file src="src/android/res/values/styles.xml" target-dir="res/values"/>
-        <resource-file src="src/android/res/values/strings.xml" target-dir="res/values"/>
-        <resource-file src="src/android/res/values/attrs.xml" target-dir="res/values"/>
+        <resource-file src="src/android/res/drawable/default_scroll_handle_bottom.xml" target="res/drawable/default_scroll_handle_bottom.xml"/>
+        <resource-file src="src/android/res/drawable/default_scroll_handle_left.xml" target="res/drawable/default_scroll_handle_left.xml"/>
+        <resource-file src="src/android/res/drawable/default_scroll_handle_right.xml" target="res/drawable/default_scroll_handle_right.xml"/>
+        <resource-file src="src/android/res/drawable/default_scroll_handle_top.xml" target="res/drawable/default_scroll_handle_top.xml"/>
+        <resource-file src="src/android/res/drawable/ic_launcher.png" target-dir="res/drawable/ic_launcher.png"/>
+        <resource-file src="src/android/res/drawable-hdpi/ic_open_in_browser_grey_700_48dp.png"     target="res/drawable-hdpi/ic_open_in_browser_grey_700_48dp.png"/>
+        <resource-file src="src/android/res/drawable-mdpi/ic_open_in_browser_grey_700_48dp.png"     target="res/drawable-mdpi/ic_open_in_browser_grey_700_48dp.png"/>
+        <resource-file src="src/android/res/drawable-xhdpi/ic_open_in_browser_grey_700_48dp.png"    target="res/drawable-xhdpi/ic_open_in_browser_grey_700_48dp.png"/>
+        <resource-file src="src/android/res/drawable-xxhdpi/ic_open_in_browser_grey_700_48dp.png"   target="res/drawable-xxhdpi/ic_open_in_browser_grey_700_48dp.png"/>
+        <resource-file src="src/android/res/drawable-xxxhdpi/ic_open_in_browser_grey_700_48dp.png"  target="res/drawable-xxxhdpi/ic_open_in_browser_grey_700_48dp.png"/>
+        <resource-file src="src/android/res/menu/options.xml" target="res/menu/options.xml"/>
+        <resource-file src="src/android/res/values/styles.xml" target="res/values/styles.xml"/>
+        <resource-file src="src/android/res/values/strings.xml" target="res/values/strings.xml"/>
+        <resource-file src="src/android/res/values/attrs.xml" target="res/values/attrs.xml"/>
         <source-file src="src/android/res/xml/documentviewer_file_paths.xml" target-dir="res/xml"/>
         <source-file target-dir="src/de/sitewaerts/cordova/documentviewer" src="src/android/de/sitewaerts/cordova/documentviewer/FileProvider.java" />
         <source-file target-dir="src/de/sitewaerts/cordova/documentviewer" src="src/android/de/sitewaerts/cordova/documentviewer/DocumentViewerPlugin.java" />
