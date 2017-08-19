@@ -229,7 +229,7 @@ public final class DocumentViewerPlugin
         }
 
         if (action.equals(Actions.VIEW_DOCUMENT)) {
-            String url ="file:///android_asset/www/assets/sample.pdf";// args.getString(Args.URL);
+            String url = args.getString(Args.URL);
             String contentType = args.getString(Args.CONTENT_TYPE);
 
             JSONObject androidOptions = options.getJSONObject(ANDROID_OPTIONS);
@@ -292,7 +292,7 @@ public final class DocumentViewerPlugin
         } else if (action.equals(Actions.APP_RESUMED)) {
             this._ignore(callbackContext);
         } else if (action.equals(Actions.CAN_VIEW)) {
-            String url = "file:///android_asset/www/issue65_en.pdf";//args.getString(Args.URL);
+            String url = args.getString(Args.URL);
 
             String contentType = args.getString(Args.CONTENT_TYPE);
 
