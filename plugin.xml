@@ -98,6 +98,7 @@
         <source-file target-dir="src/com/github/barteksc/pdfviewer/util" src="src/android/com/github/barteksc/pdfviewer/util/MathUtils.java" />
         <source-file target-dir="src/com/github/barteksc/pdfviewer/util" src="src/android/com/github/barteksc/pdfviewer/util/Util.java" />
         <source-file target-dir="src/com/github/barteksc/pdfviewer" src="src/android/com/github/barteksc/pdfviewer/AnimationManager.java" />
+        <source-file target-dir="src/com/github/barteksc/pdfviewer" src="src/android/com/github/barteksc/pdfviewer/AssetUtil.java" />
         <source-file target-dir="src/com/github/barteksc/pdfviewer" src="src/android/com/github/barteksc/pdfviewer/CacheManager.java" />
         <source-file target-dir="src/com/github/barteksc/pdfviewer" src="src/android/com/github/barteksc/pdfviewer/DecodingAsyncTask.java" />
         <source-file target-dir="src/com/github/barteksc/pdfviewer" src="src/android/com/github/barteksc/pdfviewer/DragPinchManager.java" />
