@@ -54,6 +54,8 @@ public class PdfActivity extends AppCompatActivity implements OnPageChangeListen
     void initPdfView() {
         Bundle bundle = this.getIntent().getExtras();
         String url = bundle.getString("url");
+        if(url.startsWith("file:///android_asset/"))
+            url=url.replace("file:///android_asset/","");
         pdfView = (PDFView) findViewById(assetUtil.getResId("pdfView"));
         pdfView.setBackgroundColor(Color.LTGRAY);
         if (uri != null) {

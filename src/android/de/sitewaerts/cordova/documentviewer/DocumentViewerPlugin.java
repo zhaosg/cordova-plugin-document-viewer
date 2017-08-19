@@ -230,6 +230,7 @@ public final class DocumentViewerPlugin
 
         if (action.equals(Actions.VIEW_DOCUMENT)) {
             String url = args.getString(Args.URL);
+
             String contentType = args.getString(Args.CONTENT_TYPE);
 
             JSONObject androidOptions = options.getJSONObject(ANDROID_OPTIONS);
