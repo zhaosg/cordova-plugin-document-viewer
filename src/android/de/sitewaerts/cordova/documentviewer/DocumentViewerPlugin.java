@@ -411,25 +411,13 @@ public final class DocumentViewerPlugin
         if (file != null && file.exists() && file.isFile()) {
             try {
                 Intent intent = new Intent(cordova.getActivity(), PdfActivity.class);
-
-                if (newApi()) {
-                    intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
-                    Uri contentUri = FileProvider.getUriForFile(
-                            webView.getContext(),
-                            cordova.getActivity().getPackageName() + "." + TAG
-                                    + ".fileprovider",
-                            file
-                    );
-                    intent.setDataAndType(contentUri, contentType);
-                } else {
-                    intent.setDataAndType(Uri.fromFile(file), contentType);
-                }
-
+                Bundle bundle=new Bundle();
+                bundle.putString("url", url);
+                intent.putExtras(bundle);
                 this.callbackContext = callbackContext;
                 this.cordova.startActivityForResult(this, intent,
                         REQUEST_CODE_OPEN
                 );
-
                 this.current = new Current(packageId, activity, url);
 
                 // send shown event

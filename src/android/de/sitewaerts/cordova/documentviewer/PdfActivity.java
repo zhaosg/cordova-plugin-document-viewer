@@ -29,7 +29,6 @@ public class PdfActivity extends AppCompatActivity implements OnPageChangeListen
     private final static int REQUEST_CODE = 42;
     public static final int PERMISSION_CODE = 42042;
 
-    public static final String SAMPLE_FILE = "www/assets/1.pdf";
     public static final String READ_EXTERNAL_STORAGE = "android.permission.READ_EXTERNAL_STORAGE";
 
     PDFView pdfView;
@@ -43,6 +42,7 @@ public class PdfActivity extends AppCompatActivity implements OnPageChangeListen
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         assetUtil=AssetUtil.getInstance(super.getApplicationContext());
         requestWindowFeature(Window.FEATURE_NO_TITLE);//隐藏标题栏
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);//隐藏状态栏
@@ -52,12 +52,14 @@ public class PdfActivity extends AppCompatActivity implements OnPageChangeListen
 
 
     void initPdfView() {
+        Bundle bundle = this.getIntent().getExtras();
+        String url = bundle.getString("url");
         pdfView = (PDFView) findViewById(assetUtil.getResId("pdfView"));
         pdfView.setBackgroundColor(Color.LTGRAY);
         if (uri != null) {
             displayFromUri(uri);
         } else {
-            displayFromAsset(SAMPLE_FILE);
+            displayFromAsset(url);
         }
         setTitle(pdfFileName);
     }
@@ -65,7 +67,7 @@ public class PdfActivity extends AppCompatActivity implements OnPageChangeListen
     private void displayFromAsset(String assetFileName) {
         pdfFileName = assetFileName;
 
-        pdfView.fromAsset(SAMPLE_FILE)
+        pdfView.fromAsset(assetFileName)
                 .defaultPage(pageNumber)
                 .onPageChange(this)
                 .enableAnnotationRendering(true)
