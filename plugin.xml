@@ -37,8 +37,7 @@
                     android:name="android.permission.READ_EXTERNAL_STORAGE"/>
         </config-file>
         <config-file target="AndroidManifest.xml" parent="/manifest/application">
-            <activity android:name="de.sitewaerts.cordova.documentviewer.PdfActivity"
-                      android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+            <activity android:name="de.sitewaerts.cordova.documentviewer.PdfActivity" ></activity>
         </config-file>
 
         <!--see http://stackoverflow.com/questions/38200282/android-os-fileuriexposedexception-file-storage-emulated-0-test-txt-exposed-->
