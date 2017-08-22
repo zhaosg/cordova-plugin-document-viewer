@@ -109,7 +109,7 @@
 
         <framework src="com.github.barteksc:pdfium-android:1.7.0"/>
         <!--<framework src="com.android.support:appcompat-v7:25.3.1"/>-->
-        <framework src="org.androidannotations:androidannotations:4.0.、0"/>
+        <framework src="org.androidannotations:androidannotations:4.0.0"/>
         <framework src="org.androidannotations:androidannotations-api:4.0.0"/>
      </platform>
 
