@@ -74,7 +74,6 @@
         <resource-file src="src/android/res/drawable-xxhdpi/star_outline.png"   target="res/drawable-xxhdpi/star_outline.png"/>
 
         <resource-file src="src/android/res/values/styles.xml" target="res/values/styles.xml"/>
-        <resource-file src="src/android/res/values/string.xml" target="res/values/string.xml"/>
         <resource-file src="src/android/res/values/attrs.xml" target="res/values/attrs.xml"/>
         <resource-file src="src/android/res/layout/activity_pdf.xml" target="res/layout/activity_pdf.xml"/>
         <resource-file src="src/android/res/layout/document_actionbar.xml" target="res/layout/document_actionbar.xml"/>
