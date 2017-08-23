@@ -1,4 +1,7 @@
 <resources>
-
-
+    <style name="ActionTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:actionBarSize">45dp</item>
+        <item name="colorPrimary">#2d69bd</item>
+        <item name="colorPrimaryDark">#fff</item>
+    </style>
 </resources>

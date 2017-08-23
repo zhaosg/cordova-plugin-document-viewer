@@ -9,7 +9,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="left|center_vertical"
         android:background="@color/transparent"
-        app:srcCompat="?android:attr/actionModeCloseDrawable" />
+        app:srcCompat="@drawable/back" />
+        <!--app:srcCompat="?android:attr/actionModeCloseDrawable" -->
     <TextView
         android:id="@+id/action_bar_title"
         android:layout_width="match_parent"
@@ -17,7 +18,7 @@
         android:layout_centerHorizontal="true"
         android:gravity="center"
         android:text="Custom ActionBar"
-        android:textColor="@android:color/black"
+        android:textColor="@android:color/white"
         android:textSize="16sp" />
     <ImageButton
         android:id="@+id/rightButton"

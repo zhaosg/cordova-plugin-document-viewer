@@ -414,9 +414,8 @@ public final class DocumentViewerPlugin
         if (file != null && file.exists() && file.isFile()) {
             try {
                 Intent intent = new Intent(cordova.getActivity(), PdfActivity.class);
-                Bundle bundle = new Bundle();
-                bundle.putString("url", url);
-                intent.putExtras(bundle);
+                viewerOptions.putString("url", url);
+                intent.putExtras(viewerOptions);
                 this.callbackContext = callbackContext;
                 this.cordova.startActivityForResult(this, intent,
                         REQUEST_CODE_OPEN
