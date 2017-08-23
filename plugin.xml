@@ -37,7 +37,7 @@
                     android:name="android.permission.READ_EXTERNAL_STORAGE"/>
         </config-file>
         <config-file target="AndroidManifest.xml" parent="/manifest/application">
-            <activity android:name="de.sitewaerts.cordova.documentviewer.PdfActivity" ></activity>
+            <activity android:name="de.sitewaerts.cordova.documentviewer.PdfActivity" android:theme="@style/Theme.AppCompat.Light"  />
         </config-file>
 
         <!--see http://stackoverflow.com/questions/38200282/android-os-fileuriexposedexception-file-storage-emulated-0-test-txt-exposed-->
@@ -61,16 +61,24 @@
         <resource-file src="src/android/res/drawable/default_scroll_handle_right.xml" target="res/drawable/default_scroll_handle_right.xml"/>
         <resource-file src="src/android/res/drawable/default_scroll_handle_top.xml" target="res/drawable/default_scroll_handle_top.xml"/>
         <resource-file src="src/android/res/drawable/ic_launcher.png" target="res/drawable/ic_launcher.png"/>
+
         <resource-file src="src/android/res/drawable-hdpi/ic_open_in_browser_grey_700_48dp.png"     target="res/drawable-hdpi/ic_open_in_browser_grey_700_48dp.png"/>
         <resource-file src="src/android/res/drawable-mdpi/ic_open_in_browser_grey_700_48dp.png"     target="res/drawable-mdpi/ic_open_in_browser_grey_700_48dp.png"/>
         <resource-file src="src/android/res/drawable-xhdpi/ic_open_in_browser_grey_700_48dp.png"    target="res/drawable-xhdpi/ic_open_in_browser_grey_700_48dp.png"/>
         <resource-file src="src/android/res/drawable-xxhdpi/ic_open_in_browser_grey_700_48dp.png"   target="res/drawable-xxhdpi/ic_open_in_browser_grey_700_48dp.png"/>
         <resource-file src="src/android/res/drawable-xxxhdpi/ic_open_in_browser_grey_700_48dp.png"  target="res/drawable-xxxhdpi/ic_open_in_browser_grey_700_48dp.png"/>
+
+        <resource-file src="src/android/res/drawable-hdpi/star_outline.png"     target="res/drawable-hdpi/star_outline.png"/>
+        <resource-file src="src/android/res/drawable-mdpi/star_outline.png"     target="res/drawable-mdpi/star_outline.png"/>
+        <resource-file src="src/android/res/drawable-xhdpi/star_outline.png"    target="res/drawable-xhdpi/star_outline.png"/>
+        <resource-file src="src/android/res/drawable-xxhdpi/star_outline.png"   target="res/drawable-xxhdpi/star_outline.png"/>
+
         <resource-file src="src/android/res/menu/options.xml" target="res/menu/options.xml"/>
         <resource-file src="src/android/res/values/styles.xml" target="res/values/styles.xml"/>
         <resource-file src="src/android/res/values/string.xml" target="res/values/string.xml"/>
         <resource-file src="src/android/res/values/attrs.xml" target="res/values/attrs.xml"/>
         <resource-file src="src/android/res/layout/activity_pdf.xml" target="res/layout/activity_pdf.xml"/>
+        <resource-file src="src/android/res/layout/document_actionbar.xml" target="res/layout/document_actionbar.xml"/>
 
         <source-file src="src/android/res/xml/documentviewer_file_paths.xml" target-dir="res/xml"/>
         <source-file target-dir="src/de/sitewaerts/cordova/documentviewer" src="src/android/de/sitewaerts/cordova/documentviewer/FileProvider.java" />

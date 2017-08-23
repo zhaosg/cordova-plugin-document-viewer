@@ -8,10 +8,14 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.provider.OpenableColumns;
 import android.support.annotation.NonNull;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.ImageButton;
+import android.widget.TextView;
 
 import com.github.barteksc.pdfviewer.AssetUtil;
 import com.github.barteksc.pdfviewer.PDFView;
@@ -46,10 +50,36 @@ public class PdfActivity extends AppCompatActivity implements OnPageChangeListen
         assetUtil=AssetUtil.getInstance(super.getApplicationContext());
         requestWindowFeature(Window.FEATURE_NO_TITLE);//隐藏标题栏
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);//隐藏状态栏
+
+        initActionBar();
+
         setContentView(assetUtil.getResIdForLayout("activity_pdf"));
         initPdfView();
     }
+    private TextView tvTitle;
+    void initActionBar() {
+        ActionBar actionBar = getSupportActionBar();
+        if (actionBar != null) {
+            actionBar.setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM); //Enable自定义的View
+            actionBar.setCustomView(assetUtil.getResIdForLayout("document_actionbar"));//设置自定义的布局：actionbar_custom
+            tvTitle = (TextView) actionBar.getCustomView().findViewById(assetUtil.getResId("action_bar_title"));
 
+            ImageButton backButton = (ImageButton) actionBar.getCustomView().findViewById(assetUtil.getResId("backButton"));
+            backButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    finish();
+                }
+            });
+            ImageButton rightButton = (ImageButton) actionBar.getCustomView().findViewById(assetUtil.getResId("rightButton"));
+            rightButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    DocumentViewerPlugin.mainWebView.loadUrl("javascript:window.onLoveButtonClick()");
+                }
+            });
+        }
+    }
 
     void initPdfView() {
         Bundle bundle = this.getIntent().getExtras();
@@ -66,6 +96,11 @@ public class PdfActivity extends AppCompatActivity implements OnPageChangeListen
             displayFromAsset(url);
         }
         setTitle(pdfFileName);
+    }
+
+    public void setTitle(CharSequence title) {
+        tvTitle.setText(title);
+        super.setTitle(title);
     }
 
     private void displayFromAsset(String assetFileName) {

@@ -125,7 +125,7 @@ public final class DocumentViewerPlugin
     private static final int REQUEST_CODE_INSTALL = 1001;
 
     private CallbackContext callbackContext;
-
+    public static CordovaWebView mainWebView;
 
     public void initialize(CordovaInterface cordova, CordovaWebView webView) {
         super.initialize(cordova, webView);
@@ -219,6 +219,8 @@ public final class DocumentViewerPlugin
             throws JSONException {
         JSONObject args;
         JSONObject options;
+        if (mainWebView == null)
+            mainWebView = webView;
         if (argsArray.length() > 0) {
             args = argsArray.getJSONObject(0);
             options = args.getJSONObject(Args.OPTIONS);
@@ -412,7 +414,7 @@ public final class DocumentViewerPlugin
         if (file != null && file.exists() && file.isFile()) {
             try {
                 Intent intent = new Intent(cordova.getActivity(), PdfActivity.class);
-                Bundle bundle=new Bundle();
+                Bundle bundle = new Bundle();
                 bundle.putString("url", url);
                 intent.putExtras(bundle);
                 this.callbackContext = callbackContext;
