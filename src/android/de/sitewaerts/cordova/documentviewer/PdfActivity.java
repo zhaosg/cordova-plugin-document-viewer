@@ -63,7 +63,7 @@ public class PdfActivity extends AppCompatActivity implements OnPageChangeListen
         initActionBar();
         setStatusBarBackgroundColor("#2d69bd");
 //        setStatusBarTransparent(true);
-        setContentView(assetUtil.getResIdForLayout("activity_pdf"));
+        setContentView(assetUtil.getResIdForLayout("document_activity_main"));
         initPdfView();
     }
 

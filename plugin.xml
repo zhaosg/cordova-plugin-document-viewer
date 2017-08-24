@@ -60,7 +60,6 @@
         <resource-file src="src/android/res/drawable/default_scroll_handle_left.xml" target="res/drawable/default_scroll_handle_left.xml"/>
         <resource-file src="src/android/res/drawable/default_scroll_handle_right.xml" target="res/drawable/default_scroll_handle_right.xml"/>
         <resource-file src="src/android/res/drawable/default_scroll_handle_top.xml" target="res/drawable/default_scroll_handle_top.xml"/>
-        <resource-file src="src/android/res/drawable/ic_launcher.png" target="res/drawable/ic_launcher.png"/>
 
         <resource-file src="src/android/res/drawable-hdpi/ic_open_in_browser_grey_700_48dp.png"     target="res/drawable-hdpi/ic_open_in_browser_grey_700_48dp.png"/>
         <resource-file src="src/android/res/drawable-mdpi/ic_open_in_browser_grey_700_48dp.png"     target="res/drawable-mdpi/ic_open_in_browser_grey_700_48dp.png"/>
@@ -73,9 +72,19 @@
         <resource-file src="src/android/res/drawable-xhdpi/star_outline.png"    target="res/drawable-xhdpi/star_outline.png"/>
         <resource-file src="src/android/res/drawable-xxhdpi/star_outline.png"   target="res/drawable-xxhdpi/star_outline.png"/>
 
+        <resource-file src="src/android/res/drawable-hdpi/star_fill.png"     target="res/drawable-hdpi/star_fill.png"/>
+        <resource-file src="src/android/res/drawable-mdpi/star_fill.png"     target="res/drawable-mdpi/star_fill.png"/>
+        <resource-file src="src/android/res/drawable-xhdpi/star_fill.png"    target="res/drawable-xhdpi/star_fill.png"/>
+        <resource-file src="src/android/res/drawable-xxhdpi/star_fill.png"   target="res/drawable-xxhdpi/star_fill.png"/>
+
+        <resource-file src="src/android/res/drawable-hdpi/back.png"     target="res/drawable-hdpi/back.png"/>
+        <resource-file src="src/android/res/drawable-mdpi/back.png"     target="res/drawable-mdpi/back.png"/>
+        <resource-file src="src/android/res/drawable-xhdpi/back.png"    target="res/drawable-xhdpi/back.png"/>
+        <resource-file src="src/android/res/drawable-xxhdpi/back.png"   target="res/drawable-xxhdpi/back.png"/>
+
         <resource-file src="src/android/res/values/styles.xml" target="res/values/styles.xml"/>
         <resource-file src="src/android/res/values/attrs.xml" target="res/values/attrs.xml"/>
-        <resource-file src="src/android/res/layout/activity_pdf.xml" target="res/layout/activity_pdf.xml"/>
+        <resource-file src="src/android/res/layout/document_activity_main.xml" target="res/layout/document_activity_main.xml"/>
         <resource-file src="src/android/res/layout/document_actionbar.xml" target="res/layout/document_actionbar.xml"/>
 
         <source-file src="src/android/res/xml/documentviewer_file_paths.xml" target-dir="res/xml"/>
