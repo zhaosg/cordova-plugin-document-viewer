@@ -93,7 +93,7 @@ public class PdfActivity extends AppCompatActivity implements OnPageChangeListen
             });
 
             Toolbar parent = (Toolbar) actionBar.getCustomView().getParent();
-            parent.setContentInsetsAbsolute(0, 0);
+            parent.setContentInsetsAbsolute(15, 15);
         }
     }
 
