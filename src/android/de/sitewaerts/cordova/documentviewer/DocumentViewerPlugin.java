@@ -69,6 +69,8 @@ public final class DocumentViewerPlugin
 
         public static final String INSTALL_VIEWER_APP = "install";
 
+        public static final String APPLY_STATUS = "applyStatus";
+
     }
 
     public static final class Args {
@@ -331,6 +333,12 @@ public final class DocumentViewerPlugin
 
             callbackContext.success(successObj);
         } else if (action.equals(Actions.GET_SUPPORT_INFO)) {
+            JSONObject successObj = new JSONObject();
+            JSONArray supported = new JSONArray();
+            supported.put(PDF);
+            successObj.put(Result.SUPPORTED, supported);
+            callbackContext.success(successObj);
+        } else if (action.equals(Actions.APPLY_STATUS)) {
             JSONObject successObj = new JSONObject();
             JSONArray supported = new JSONArray();
             supported.put(PDF);

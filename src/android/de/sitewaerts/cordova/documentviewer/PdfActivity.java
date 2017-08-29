@@ -87,7 +87,6 @@ public class PdfActivity extends AppCompatActivity implements OnPageChangeListen
             rightButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    rightButton.setImageResource(assetUtil.getResIdForDrawable("star_fill"));
                     DocumentViewerPlugin.mainWebView.loadUrl("javascript:window.onLoveButtonClick()");
                 }
             });
