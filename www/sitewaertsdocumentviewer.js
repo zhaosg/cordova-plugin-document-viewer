@@ -175,7 +175,6 @@ cordova.define("cordova-plugin-document-viewer.SitewaertsDocumentViewer", functi
             var errorPrefix = "Error in " + JS_HANDLE + ".applyStatus(): ";
             try
             {
-                options = getOptions(options);
                 exec(
                     onSuccess,
                     function (err)
