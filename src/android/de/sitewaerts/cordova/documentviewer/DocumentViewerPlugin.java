@@ -233,10 +233,11 @@ public final class DocumentViewerPlugin
         }
 
         if (action.equals(Actions.APPLY_STATUS)) {
+            final boolean loved= options.getBoolean("loved");
             cordova.getActivity().runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
-                    PdfActivity.instance.setLove(true);
+                    PdfActivity.instance.setLove(loved);
                 }
             });
         } else if (action.equals(Actions.VIEW_DOCUMENT)) {
