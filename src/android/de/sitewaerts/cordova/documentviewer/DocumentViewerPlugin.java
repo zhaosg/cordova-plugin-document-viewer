@@ -233,18 +233,13 @@ public final class DocumentViewerPlugin
         }
 
         if (action.equals(Actions.APPLY_STATUS)) {
-            if (argsArray.length() > 0) {
-                args = argsArray.getJSONObject(0);
-            }
             cordova.getActivity().runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
                     PdfActivity.instance.setLove(true);
                 }
             });
-        }
-
-        if (action.equals(Actions.VIEW_DOCUMENT)) {
+        } else if (action.equals(Actions.VIEW_DOCUMENT)) {
             String url = args.getString(Args.URL);
 
             String contentType = args.getString(Args.CONTENT_TYPE);
