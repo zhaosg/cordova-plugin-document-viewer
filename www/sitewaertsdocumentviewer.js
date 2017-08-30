@@ -41,14 +41,17 @@ cordova.define("cordova-plugin-document-viewer.SitewaertsDocumentViewer", functi
         if (!options.documentView)
             options.documentView = {};
         if (!options.documentView.closeLabel)
-            options.documentView.closeLabel = "Done";
+            options.documentView.closeLabel = "返回";
 
 
         if (!options.navigationView)
             options.navigationView = {};
         if (!options.navigationView.closeLabel)
-            options.navigationView.closeLabel = "Back";
+            options.navigationView.closeLabel = "返回";
 
+
+        if (!options.loved)
+            options.loved = false;
 
         if (!options.email)
             options.email = {};
