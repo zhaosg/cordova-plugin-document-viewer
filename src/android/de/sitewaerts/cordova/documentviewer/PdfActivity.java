@@ -96,6 +96,9 @@ public class PdfActivity extends AppCompatActivity implements OnPageChangeListen
             Toolbar parent = (Toolbar) actionBar.getCustomView().getParent();
             parent.setContentInsetsAbsolute(15, 15);
         }
+        Bundle bundle = this.getIntent().getExtras();
+        Boolean love = bundle.getBoolean(DocumentViewerPlugin.LOVED_OPTIONS);
+        setLove(love);
     }
 
     void initPdfView() {

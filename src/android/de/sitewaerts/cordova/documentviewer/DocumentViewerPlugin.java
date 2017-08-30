@@ -90,6 +90,7 @@ public final class DocumentViewerPlugin
     public static final String BOOKMARKS_OPTIONS = "bookmarks";
     public static final String SEARCH_OPTIONS = "search";
     public static final String TITLE_OPTIONS = "title";
+    public static final String LOVED_OPTIONS = "loved";
 
     public static final class Options {
         public static final String VIEWER_APP_PACKAGE_ID = "viewerAppPackage";
@@ -233,7 +234,7 @@ public final class DocumentViewerPlugin
         }
 
         if (action.equals(Actions.APPLY_STATUS)) {
-            final boolean loved= options.getBoolean("loved");
+            final boolean loved= options.getBoolean(LOVED_OPTIONS);
             cordova.getActivity().runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
@@ -293,6 +294,8 @@ public final class DocumentViewerPlugin
             );
             viewerOptions
                     .putString(TITLE_OPTIONS, options.getString(TITLE_OPTIONS));
+            viewerOptions
+                    .putBoolean(LOVED_OPTIONS, options.getBoolean(LOVED_OPTIONS));
 
             this._open(url, contentType, packageId, activity,
                     callbackContext,
