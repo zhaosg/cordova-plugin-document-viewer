@@ -217,7 +217,7 @@ public final class DocumentViewerPlugin
         return sw.toString();
     }
 
-    private void doExecute(String action, JSONArray argsArray, CallbackContext callbackContext)
+    private void doExecute(String action, JSONArray argsArray, final CallbackContext callbackContext)
             throws JSONException {
         JSONObject args;
         JSONObject options;
@@ -230,6 +230,18 @@ public final class DocumentViewerPlugin
             //no arguments passed, initialize with empty JSON Objects
             args = new JSONObject();
             options = new JSONObject();
+        }
+
+        if (action.equals(Actions.APPLY_STATUS)) {
+            if (argsArray.length() > 0) {
+                args = argsArray.getJSONObject(0);
+            }
+            cordova.getActivity().runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    PdfActivity.instance.setLove(true);
+                }
+            });
         }
 
         if (action.equals(Actions.VIEW_DOCUMENT)) {
@@ -333,12 +345,6 @@ public final class DocumentViewerPlugin
 
             callbackContext.success(successObj);
         } else if (action.equals(Actions.GET_SUPPORT_INFO)) {
-            JSONObject successObj = new JSONObject();
-            JSONArray supported = new JSONArray();
-            supported.put(PDF);
-            successObj.put(Result.SUPPORTED, supported);
-            callbackContext.success(successObj);
-        } else if (action.equals(Actions.APPLY_STATUS)) {
             JSONObject successObj = new JSONObject();
             JSONArray supported = new JSONArray();
             supported.put(PDF);

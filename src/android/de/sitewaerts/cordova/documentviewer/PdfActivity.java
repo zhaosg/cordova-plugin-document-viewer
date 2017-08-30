@@ -50,12 +50,13 @@ public class PdfActivity extends AppCompatActivity implements OnPageChangeListen
 
     String pdfFileName;
     String pdfTitle;
+    public static PdfActivity instance;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        instance = this;
         assetUtil = AssetUtil.getInstance(super.getApplicationContext());
         requestWindowFeature(Window.FEATURE_NO_TITLE);//隐藏标题栏
 //        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);//隐藏状态栏
@@ -68,6 +69,7 @@ public class PdfActivity extends AppCompatActivity implements OnPageChangeListen
     }
 
     private TextView tvTitle;
+    private ImageButton rightButton;
 
     void initActionBar() {
         ActionBar actionBar = getSupportActionBar();
@@ -83,7 +85,7 @@ public class PdfActivity extends AppCompatActivity implements OnPageChangeListen
                     finish();
                 }
             });
-            final ImageButton rightButton = (ImageButton) actionBar.getCustomView().findViewById(assetUtil.getResId("rightButton"));
+            rightButton = (ImageButton) actionBar.getCustomView().findViewById(assetUtil.getResId("rightButton"));
             rightButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -112,6 +114,13 @@ public class PdfActivity extends AppCompatActivity implements OnPageChangeListen
             displayFromAsset(url);
         }
         setTitle(pdfFileName);
+    }
+
+    public void setLove(Boolean love) {
+        if (love)
+            rightButton.setImageResource(assetUtil.getResIdForDrawable("star_fill"));
+        else
+            rightButton.setImageResource(assetUtil.getResIdForDrawable("star_outline"));
     }
 
     public void setTitle(CharSequence title) {
