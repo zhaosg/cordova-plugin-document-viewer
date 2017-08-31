@@ -31,8 +31,11 @@
 #import "ReaderContentView.h"
 #import "ReaderThumbCache.h"
 #import "ReaderThumbQueue.h"
+#import "SitewaertsDocumentViewer.h"
+#import "SDVReaderMainToolbar.h"
 
 #import <MessageUI/MessageUI.h>
+#import <Cordova/CDVWebViewEngineProtocol.h>
 
 @interface ReaderViewController () <UIScrollViewDelegate, UIGestureRecognizerDelegate, MFMailComposeViewControllerDelegate, UIDocumentInteractionControllerDelegate,
 									ReaderMainToolbarDelegate, ReaderMainPagebarDelegate, ReaderContentViewDelegate, ThumbsViewControllerDelegate>
@@ -720,6 +723,12 @@
 #endif // end of READER_ENABLE_THUMBS Option
 }
 
+- (void)tappedInToolbar:(ReaderMainToolbar *)toolbar loveButton:(UIButton *)button
+{
+	SitewaertsDocumentViewer *cdv=(SitewaertsDocumentViewer *)self.delegate;
+	[cdv.webViewEngine evaluateJavaScript:@"window.onLoveButtonClick()" completionHandler:nil];
+}
+
 - (void)tappedInToolbar:(ReaderMainToolbar *)toolbar exportButton:(UIButton *)button
 {
 	if (printInteraction != nil) [printInteraction dismissAnimated:YES];
@@ -881,5 +890,7 @@
 
 	if (userInterfaceIdiom == UIUserInterfaceIdiomPad) if (printInteraction != nil) [printInteraction dismissAnimated:NO];
 }
-
+- (void)setLoved:(NSNumber *) val {
+	[(SDVReaderMainToolbar *)mainToolbar setLoved:val];
+}
 @end

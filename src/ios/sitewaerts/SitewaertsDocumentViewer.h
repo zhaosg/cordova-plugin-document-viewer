@@ -31,6 +31,8 @@
 
 - (void)getSupportInfo:(CDVInvokedUrlCommand*)command;
 
+- (void)applyStatus:(CDVInvokedUrlCommand*)command;
+
 - (void)canViewDocument:(CDVInvokedUrlCommand*)command;
 
 - (void)viewDocument:(CDVInvokedUrlCommand*)command;

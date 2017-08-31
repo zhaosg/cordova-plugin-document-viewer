@@ -66,9 +66,7 @@
     NSDate *lastHideTime;
     
     BOOL ignoreDidScroll;
-
 }
-
 
 @property (nonatomic, weak, readwrite) id <ReaderViewControllerDelegate> delegate;
 
@@ -77,5 +75,7 @@
 - (void)updateContentViews:(UIScrollView *)scrollView;
 
 - (void)closeDocument;
+
+- (void)setLoved:(NSNumber *) val ;
 
 @end

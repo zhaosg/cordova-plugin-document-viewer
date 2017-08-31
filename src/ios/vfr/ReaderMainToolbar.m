@@ -327,6 +327,11 @@
 	[delegate tappedInToolbar:self thumbsButton:button];
 }
 
+- (void)loveButtonTapped:(UIButton *)button
+{
+	[delegate tappedInToolbar:self loveButton:button];
+}
+
 - (void)exportButtonTapped:(UIButton *)button
 {
 	[delegate tappedInToolbar:self exportButton:button];

@@ -64,6 +64,12 @@
     [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
 }
 
+- (void)applyStatus:(CDVInvokedUrlCommand*)command {
+    NSMutableDictionary *options = [command.arguments objectAtIndex:0];
+    NSMutableDictionary *viewerOptions = [options objectForKey:@"options"];
+    NSNumber *loved=[viewerOptions objectForKey:@"loved"];
+    [readerViewController setLoved:loved];
+}
 - (void)canViewDocument:(CDVInvokedUrlCommand*)command {
     CDVPluginResult* pluginResult = nil;
     // result object
@@ -145,7 +151,7 @@
                     handlerInfo.shouldClose = [handler[@"close"] boolValue];
                     [linkHandlers addObject:handlerInfo];
                 }
-                
+
                 readerViewController = [[SDVReaderViewController alloc] initWithReaderDocument:document options:viewerOptions linkHandler:^(NSString *link, void (^nativeLinkHandler)(void)) {
                     BOOL handled = NO;
                     for (SDVLinkHandlerInfo *handler in linkHandlers) {
@@ -170,7 +176,7 @@
                         nativeLinkHandler();
                     }
                 }];
-                
+
                 readerViewController.delegate = self;
                 readerViewController.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
                 readerViewController.modalPresentationStyle = UIModalPresentationFullScreen;

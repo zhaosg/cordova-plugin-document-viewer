@@ -10,7 +10,9 @@
 #import "ReaderMainToolbar.h"
 
 @interface SDVReaderMainToolbar : ReaderMainToolbar
-
+{
+    UIButton *loveButton;
+}
 - (instancetype)initWithFrame:(CGRect)frame document:(ReaderDocument *)document options:(NSDictionary *)options;
-
+- (void)setLoved:(NSNumber *) val ;
 @end
