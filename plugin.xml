@@ -228,6 +228,8 @@
         <resource-file src="src/ios/Graphics/SDVReader-starOutline@2x.png"/>
         <resource-file src="src/ios/Graphics/SDVReader-starFill.png"/>
         <resource-file src="src/ios/Graphics/SDVReader-starFill@2x.png"/>
+        <resource-file src="src/ios/Graphics/SDVReader-back.png"/>
+        <resource-file src="src/ios/Graphics/SDVReader-back@2x.png"/>
 
 
         <framework src="UIKit.framework"/>
