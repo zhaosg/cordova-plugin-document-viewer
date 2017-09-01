@@ -12,6 +12,7 @@
 
 #import "SDVReaderMainToolbar.h"
 #import "ReaderMainToolbar+SDVReaderMainToolbarPassThrough.h"
+#import "UIColor+ColorChange.h"
 
 #import <MessageUI/MessageUI.h>
 
@@ -104,7 +105,7 @@
         UIImage *buttonN = [[UIImage imageNamed:@"Reader-Button-N"] stretchableImageWithLeftCapWidth:5 topCapHeight:0];
 #endif // end of READER_FLAT_UI Option
 
-        BOOL largeDevice = ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad);
+        BOOL largeDevice = YES;//([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad);
 
         const CGFloat buttonSpacing = BUTTON_SPACE;
         const CGFloat iconButtonWidth = ICON_BUTTON_WIDTH;
@@ -162,8 +163,8 @@
 
 //            [self addSubview:thumbsButton]; //leftButtonX += (iconButtonWidth + buttonSpacing);
 
-            titleX += (iconButtonWidth + buttonSpacing);
-            titleWidth -= (iconButtonWidth + buttonSpacing);
+//            titleX += (iconButtonWidth + buttonSpacing);
+//            titleWidth -= (iconButtonWidth + buttonSpacing);
         }
 #endif // end of READER_ENABLE_THUMBS Option
 
@@ -188,7 +189,7 @@
             flagButton.exclusiveTouch = YES;
 
             [self addSubview:flagButton];
-            titleWidth -= (iconButtonWidth + buttonSpacing);
+//            titleWidth -= (iconButtonWidth + buttonSpacing);
 
             markButton = flagButton;
             markButton.enabled = NO;
@@ -225,7 +226,7 @@
                         emailButton.exclusiveTouch = YES;
 
                         [self addSubview:emailButton];
-                        titleWidth -= (iconButtonWidth + buttonSpacing);
+//                        titleWidth -= (iconButtonWidth + buttonSpacing);
                     }
                 }
             }
@@ -253,7 +254,7 @@
                     printButton.exclusiveTouch = YES;
 
                     [self addSubview:printButton];
-                    titleWidth -= (iconButtonWidth + buttonSpacing);
+//                    titleWidth -= (iconButtonWidth + buttonSpacing);
                 }
             }
         }
@@ -277,7 +278,7 @@
                 exportButton.exclusiveTouch = YES;
 
                 [self addSubview:exportButton];
-                titleWidth -= (iconButtonWidth + buttonSpacing);
+//                titleWidth -= (iconButtonWidth + buttonSpacing);
             }
         }
 
@@ -308,12 +309,28 @@
 
 
             //adjust available width for document title
-            titleWidth -= (SHOW_CONTROL_WIDTH + buttonSpacing);
+//            titleWidth -= (SHOW_CONTROL_WIDTH + buttonSpacing);
         }
 
+        ////////// alan
+
+
+        loveButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        loveButton.frame = CGRectMake(rightButtonX, BUTTON_Y, iconButtonWidth, BUTTON_HEIGHT);
+        [loveButton setImage:[UIImage imageNamed:@"SDVReader-outline"] forState:UIControlStateNormal];
+        [loveButton addTarget:self action:@selector(loveButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
+        [loveButton setBackgroundImage:buttonH forState:UIControlStateHighlighted];
+        [loveButton setBackgroundImage:buttonN forState:UIControlStateNormal];
+        loveButton.autoresizingMask = UIViewAutoresizingNone;
+        loveButton.exclusiveTouch = YES;
+
+        [self addSubview:loveButton]; //leftButtonX += (iconButtonWidth + buttonSpacing);
+        titleWidth -= (iconButtonWidth + buttonSpacing);
+        NSNumber *loved = [options objectForKey:@"loved"];
+        [self setLoved:loved];
         if (largeDevice == YES) // Show document filename in toolbar
         {
-            CGRect titleRect = CGRectMake(titleX, BUTTON_Y, titleWidth, TITLE_HEIGHT);
+            CGRect titleRect = CGRectMake(titleX, BUTTON_Y+1, titleWidth, TITLE_HEIGHT);
 
             UILabel *titleLabel = [[UILabel alloc] initWithFrame:titleRect];
 
@@ -321,7 +338,7 @@
             titleLabel.font = [UIFont systemFontOfSize:TITLE_FONT_SIZE];
             titleLabel.autoresizingMask = UIViewAutoresizingFlexibleWidth;
             titleLabel.baselineAdjustment = UIBaselineAdjustmentAlignCenters;
-            titleLabel.textColor = [UIColor colorWithWhite:0.0f alpha:1.0f];
+            titleLabel.textColor = [UIColor colorWithHexString:@"#ffffff"];
             titleLabel.backgroundColor = [UIColor clearColor];
             titleLabel.adjustsFontSizeToFitWidth = YES;
             titleLabel.minimumScaleFactor = 0.75f;
@@ -336,17 +353,7 @@
 
             [self addSubview:titleLabel];
         }
-////////// alan
-        loveButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        loveButton.frame = CGRectMake(rightButtonX, BUTTON_Y, iconButtonWidth, BUTTON_HEIGHT);
-        [loveButton setImage:[UIImage imageNamed:@"SDVReader-outline"] forState:UIControlStateNormal];
-        [loveButton addTarget:self action:@selector(loveButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
-        [loveButton setBackgroundImage:buttonH forState:UIControlStateHighlighted];
-        [loveButton setBackgroundImage:buttonN forState:UIControlStateNormal];
-        loveButton.autoresizingMask = UIViewAutoresizingNone;
-        loveButton.exclusiveTouch = YES;
 
-        [self addSubview:loveButton]; //leftButtonX += (iconButtonWidth + buttonSpacing);
     }
 
     return self;
