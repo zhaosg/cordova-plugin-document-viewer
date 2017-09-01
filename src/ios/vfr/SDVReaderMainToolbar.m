@@ -19,14 +19,14 @@
 
 #pragma mark - Constants
 
-#define BUTTON_X 8.0f
+#define BUTTON_X 0.0f
 #define BUTTON_Y 8.0f
 
 #define BUTTON_SPACE 8.0f
 #define BUTTON_HEIGHT 30.0f
 
 #define BUTTON_FONT_SIZE 15.0f
-#define TEXT_BUTTON_PADDING 24.0f
+#define TEXT_BUTTON_PADDING 0.0f
 
 #define SHOW_CONTROL_WIDTH 30.0f
 #define ICON_BUTTON_WIDTH 40.0f

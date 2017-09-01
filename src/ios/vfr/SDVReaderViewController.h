@@ -9,7 +9,7 @@
 
 #import "ReaderConstants.h"
 #import "ReaderViewController.h"
-
+#import "UIColor+ColorChange.h"
 #import <UIKit/UIKit.h>
 
 typedef enum

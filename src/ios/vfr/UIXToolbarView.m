@@ -25,6 +25,7 @@
 
 #import "ReaderConstants.h"
 #import "UIXToolbarView.h"
+#import "UIColor+ColorChange.h"
 
 #import <QuartzCore/QuartzCore.h>
 
@@ -73,7 +74,8 @@
 		}
 		else // Follow The Fuglyosity of Flat Fad
 		{
-			self.backgroundColor = [UIColor colorWithWhite:0.94f alpha:0.94f];
+//			self.backgroundColor = [UIColor colorWithWhite:0.94f alpha:0.94f];
+			self.backgroundColor = [UIColor colorWithHexString:@"#1565c0"];
 
 			CGRect lineRect = self.bounds; lineRect.origin.y += lineRect.size.height; lineRect.size.height = 1.0f;
 

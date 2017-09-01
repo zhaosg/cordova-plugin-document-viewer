@@ -1034,7 +1034,7 @@
             CGRect statusBarRect = viewRect; statusBarRect.size.height = STATUS_HEIGHT;
             fakeStatusBar = [[UIView alloc] initWithFrame:statusBarRect]; // UIView
             fakeStatusBar.autoresizingMask = UIViewAutoresizingFlexibleWidth;
-            fakeStatusBar.backgroundColor = [UIColor blackColor];
+            fakeStatusBar.backgroundColor = [UIColor colorWithHexString:@"#1565c0"];
             fakeStatusBar.contentMode = UIViewContentModeRedraw;
             fakeStatusBar.userInteractionEnabled = NO;
             
