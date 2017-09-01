@@ -362,7 +362,7 @@
         NSLog(@"?????");
         [loveButton setImage:[UIImage imageNamed:@"SDVReader-starOutline"] forState:UIControlStateNormal];
     } else {
-        NSLog(@"??");
+        NSLog(@"???");
         [loveButton setImage:[UIImage imageNamed:@"SDVReader-starFill"] forState:UIControlStateNormal];
     }
 
