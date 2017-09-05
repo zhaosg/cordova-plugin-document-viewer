@@ -197,6 +197,8 @@
         <source-file src="src/ios/vfr/ThumbsViewController+SDVThumbsViewControllerPassThrough.m"/>
         <header-file src="src/ios/vfr/UIXToolbarView.h"/>
         <source-file src="src/ios/vfr/UIXToolbarView.m"/>
+        <header-file src="src/ios/vfr/UIColor+ColorChange.h"/>
+        <source-file src="src/ios/vfr/UIColor+ColorChange.m"/>
 
 
         <resource-file src="src/ios/Graphics/Default-568h@2x.png"/>
