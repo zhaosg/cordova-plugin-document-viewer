@@ -292,7 +292,7 @@
 
         //don't show viewmode for single page documents
         if ([document.pageCount intValue] > 1) {
-            rightButtonX -= (SHOW_CONTROL_WIDTH + buttonSpacing); // Next position
+            //rightButtonX -= (SHOW_CONTROL_WIDTH + buttonSpacing); // Next position
 
             UISegmentedControl *showControl = [[UISegmentedControl alloc] initWithItems:buttonItems];
             showControl.frame = CGRectMake(rightButtonX, BUTTON_Y, SHOW_CONTROL_WIDTH, BUTTON_HEIGHT);
