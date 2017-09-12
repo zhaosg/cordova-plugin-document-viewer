@@ -21,7 +21,7 @@
 #pragma mark - Constants
 
 #define BUTTON_X 0.0f
-#define BUTTON_Y 8.0f
+#define BUTTON_Y 6.0f
 
 #define BUTTON_SPACE 8.0f
 #define BUTTON_HEIGHT 30.0f
