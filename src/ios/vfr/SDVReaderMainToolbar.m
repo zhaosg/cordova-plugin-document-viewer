@@ -32,7 +32,7 @@
 #define SHOW_CONTROL_WIDTH 30.0f
 #define ICON_BUTTON_WIDTH 40.0f
 
-#define TITLE_FONT_SIZE 19.0f
+#define TITLE_FONT_SIZE 16.0f
 #define TITLE_HEIGHT 28.0f
 
 //  this is just testcode to provide default options for the original method call
