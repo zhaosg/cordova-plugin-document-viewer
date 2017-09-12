@@ -313,11 +313,10 @@
         }
 
         ////////// alan
-
-
+        rightButtonX -= (iconButtonWidth + buttonSpacing); // Next position
         loveButton = [UIButton buttonWithType:UIButtonTypeCustom];
         loveButton.frame = CGRectMake(rightButtonX, BUTTON_Y, iconButtonWidth, BUTTON_HEIGHT);
-        [loveButton setImage:[UIImage imageNamed:@"SDVReader-outline"] forState:UIControlStateNormal];
+        [loveButton setImage:[UIImage imageNamed:@"SDVReader-starOutline"] forState:UIControlStateNormal];
         [loveButton addTarget:self action:@selector(loveButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
         [loveButton setBackgroundImage:buttonH forState:UIControlStateHighlighted];
         [loveButton setBackgroundImage:buttonN forState:UIControlStateNormal];
@@ -368,10 +367,8 @@
 - (void)setLoved:(NSNumber *)val {
 
     if ([val intValue] == 0) {
-        NSLog(@"?????");
         [loveButton setImage:[UIImage imageNamed:@"SDVReader-starOutline"] forState:UIControlStateNormal];
     } else {
-        NSLog(@"???");
         [loveButton setImage:[UIImage imageNamed:@"SDVReader-starFill"] forState:UIControlStateNormal];
     }
 
